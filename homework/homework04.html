@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				margin: 20px auto;
+				height: 50px;
+				width: 300px;
+			}
+			.box .comment{
+				font-size: 30px;
+			}
+			.comment li{
+				float: left;
+			}
+			ul{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="comment">
+				<li>☆</li>
+				<li>☆</li>
+				<li>☆</li>
+				<li>☆</li>
+				<li>☆</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.4.1.js" ></script>
+	<script>
+		$(function(){
+			var wjx_none="☆";
+			var wjx_sel="★";
+			 $(".comment li").on("mouseover",function(){
+			 	$(this).text(wjx_sel).prevAll("li").
+			 	text(wjx_sel).end().nextAll().text(wjx_none);
+			 });	
+			 $(".comment li").on("mouseout",function(){
+			 	if($("li.current").length === 0){
+			 		$(".comment li").text(wjx_none);
+			 	}else{
+			 		$("li .current").text(wjx_sel).prevAll().text(wjx_sel).end().next
+			 	}
+			});
+			$(".comment li").on("click",function(){
+				$(this).attr("class","current").siblings().removeClass("current");
+			});
+		});
+	</script>
+</html>

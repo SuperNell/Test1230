@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id='myform' name="myform"  method="post">		
+			<input type="hidden" name="uno" value="9999" disabled="disabled"/>
+			姓名:<input type="text" id="uname" name="uname" /><br />
+			密码:<input type="password" id="upwd" name="upwd" value="123456" /><br />
+			年龄:<input type="radio" name="uage" value="0" checked="checked"/>小屁孩
+				 <input type="radio" name="uage" value="1"/>你懂得  <br /> 
+			爱好:<input type="checkbox" name="ufav" value="篮球"/>篮球
+				 <input type="checkbox" name="ufav" value="爬床"/>爬床
+				 <input type="checkbox" name="ufav" value="代码"/>代码<br />
+			来自:<select id="ufrom" name="ufrom">
+					<option value="-1" selected="selected">请选择</option>
+					<option value="0">北京</option>
+					<option value="1">上海</option>
+				</select><br />
+			简介:<textarea rows="10" cols="30" name="uintro"></textarea><br />
+			头像:<input type="file"  /><br />
+			<input type="image" src="http://www.baidu.com/img/bd_logo1.png" width="20" height="20"/>
+			<button type="submit" onclick="return checkForm();">提交</button>
+			<button type="reset" >重置</button>	
+			<input type="button" value="普通按钮" />
+		</form>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	<script>
+		var inputs=$("input");
+	</script>
+</html>

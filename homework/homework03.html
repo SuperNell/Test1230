@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		籍贯：
+		<select id="province">
+			<option value="0" selected>-请选择-</option>	
+		</select>
+		<select id="city">
+			<option value="0" selected>-请选择-</option>
+		</select>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.4.1.js" ></script>
+	<script>
+		var pro=["江苏","黑龙江","山东"];
+		var city=[["苏州","南通","南京","常州","镇江","徐州"],["哈尔滨","大庆","鹤岗","齐齐哈尔"],["济南","日照","烟台","德州","聊城"]];
+		$(function(){
+			for(var i=0;i<pro.length;i++){
+				$("#province").append($("<option></option>").val(i+1).html(pro[i]));
+			}
+			$("#province").change(function(){
+				var index=$(this).val()-1;
+				$("#city").prop("length",1);
+				for(var i=0;i<city[index].length;i++){
+					$("#city").append($("<option>").val(i+1).html(city[index][i]));
+				}
+			});
+		});
+	</script>
+</html>

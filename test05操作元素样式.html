@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+			    padding: 8px;
+			    width: 180px;
+			}
+			.blue{
+				background: blue;
+			}
+			.larger{
+				font-size: 30px;
+			}
+			.green {
+				background : green;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h3>css()方法设置元素样式</h3>
+		<div id="conBlue" class="blue larger">天蓝色</div>
+        <div id="conRed" class="green">大红色</div>
+        <div id="remove" class="blue larger">天蓝色</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	<script>
+		var cls=$("#conBlue").attr("class");
+		console.log(cls);
+		$("#conBlue").attr("class","green");
+		$("#conBlue").addClass("larger");
+		$("#conRed").css("color","red");
+		$("#conRed").css("background","pink");
+		$("#conRed").css({'font-size':'20px','font-family':'楷体'});
+		$("#remove").removeClass("blue");
+	</script>
+</html>

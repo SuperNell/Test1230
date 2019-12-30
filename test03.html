@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="parent">爷爷
+			<div id="child">
+				爸爸
+				<div>大儿子</div>
+				<p>大女儿</p>
+				<div>小儿子</div>
+			</div>	
+			<div>
+				大伯
+				<div>大儿子</div>
+				<div>二儿子</div>
+			</div>
+			<div>
+				二伯
+			</div>
+			<div>
+				叔叔
+			</div>
+			<p>
+				姑姑
+			</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	<script>
+		var houdai=$("#parent #child");
+		console.log(houdai);
+		var zidai=$("#parent>div");
+		console.log(zidai);
+		var xl=$("#child+div");
+		console.log(xl);
+		var tb=$("#child~div");
+		console.log(tb);
+	</script>
+</html>

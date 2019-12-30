@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#tb{
+				width: 500px;
+			}
+			td{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="tb" border="1px" style="border-collapse: collapse" align="center">
+			<tr>
+				<th>
+					<input type="checkbox" id="all">
+					<input type="button" value="反选" class="btn" id="reverse"> 
+				</th>
+				<th>分类ID</th>
+				<th>分类名称</th>
+				<th>分类描述</th>
+				<th>操作</th>
+			</tr>
+			<tr id="main">
+				<td><input type="checkbox" value="1" id="id1"></td>
+				<td>1</td>
+				<td>手机数码</td>
+				<td>手机数码类商品</td>
+				<td>修改&nbsp;删除</td>
+			</tr>
+			<tr id="main">
+				<td><input type="checkbox" value="2" id="id2"></td>
+				<td>2</td>
+				<td>电脑办公</td>
+				<td>电脑办公类商品</td>
+				<td>修改&nbsp;删除</td>
+			</tr>
+			<tr id="main">
+				<td><input type="checkbox" value="3" id="id3"></td>
+				<td>3</td>
+				<td>鞋靴箱包</td>
+				<td>鞋靴箱包类商品</td>
+				<td>修改&nbsp;删除</td>
+			</tr>
+			<tr id="main">
+				<td><input type="checkbox" value="4" id="id4"></td>
+				<td>4</td>
+				<td>家居饰品</td>
+				<td>家居饰品类商品</td>
+				<td>修改&nbsp;删除</td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.4.1.js" ></script>
+	<script>
+		$(function(){
+			$("tr:gt(0):even").css("background","rgb(255,218,185)");
+			$("tr:gt(0):odd").css("background","rgb(240,288,255)")
+		});
+		$("#all").click(function(){
+			if(this.checked){
+				$("#main input").prop("checked",true);
+			}else{
+				$("#main input").prop("checked",false);
+			}
+		});
+		$("#reverse").click(function(){
+			$("#main input").each(function(){
+				$(this).prop("checked",!$(this).prop("checked"));
+			});
+		});
+	</script>
+</html>

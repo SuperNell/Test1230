@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div	{
+			    margin: 10px 0px;
+			}
+			span{
+			    color: white;
+			    padding: 8px
+			}
+			.red{
+			    background-color: red;
+			}
+			.blue{
+			    background-color: blue;
+			}
+			.green{
+			    background-color: green;
+			}
+			.pink{
+			    background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>prepend()方法前追加内容</h3>
+		<h3>prependTo()方法前追加内容</h3>
+		<h3>append()方法后追加内容</h3>
+		<h3>appendTo()方法后追加内容</h3>
+		
+		<span class="red">男神</span>
+		<span class="blue">偶像</span>
+		<div class="green">
+            <span >小鲜肉</span>
+        </div> 
+	</body>
+	<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	<script>
+		var sp="<span >111</span>";
+		console.log($(sp));
+		$(".green").prepend(sp);
+		$(".green").append(sp);
+		$(".green").before(sp);
+		$(".blue").before('<span class="pink">女神</span>');
+	</script>
+</html>

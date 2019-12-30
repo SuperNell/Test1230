@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3><span>html()和text()方法设置元素内容</span></h3>
+		<div id="html"></div>
+        <div id="text"></div>
+        <input type="text" id="uname" value="oop" />
+	</body>
+	<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	<script>
+		$("#html").html("上海");
+		$("#html").html("<h2>上海</h2>");
+		$("#html").text("<h2>上海</h2>");
+		var html=$("#html").html();
+		console.log(html);
+		var txt=$("#html").text();
+		console.log(txt);
+		$("#uname").val("今天天气不太好");
+		var uname=$("#uname").val();
+		console.log(uname);
+	</script>
+</html>
